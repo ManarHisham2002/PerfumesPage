@@ -1,0 +1,911 @@
+/* Start General Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-family: "Moon Dance", cursive;
+    font-size: 40px;
+    color: #A7276D;
+    padding: 10px 0 15px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+h2::after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #A7276D;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+h3 {
+    padding: 15px 0 0 0;
+}
+
+p {
+    font-size: 18px;
+    margin: auto;
+    padding: 25px 0;
+    letter-spacing: 1px;
+    color: #7a7979;
+}
+
+button {
+    border: none;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(167, 39, 109);
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-right: 7px;
+}
+
+i {
+    color: #A7276D;
+}
+
+/* End General Style */
+/* Start Component Style */
+.container {
+    padding: 0 80px;
+}
+
+.logo img {
+    height: 80px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-name {
+    margin-left: 70px;
+    margin-top: 5px;
+}
+
+.logo-name p {
+    font-size: 60px;
+    line-height: 30px;
+    font-family: "Mr Dafoe", cursive;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cards {
+    margin: 20px auto 0 auto;
+    padding: 20px 0;
+    width: 100%;
+    height: 50px;
+}
+
+.card {
+    width: calc(94% / 3);
+    border: 1px solid #A7276D;
+    border-radius: 20px;
+    float: left;
+    text-align: left;
+    padding: 23px;
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(167, 39, 109, .4);
+    border-radius: 20px;
+    transition: all 1s;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card-center {
+    margin: 0 3%;
+}
+
+.card .view-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #A7276D;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card .view-link i {
+    margin-top: 2px;
+    font-size: 1em;
+    color: #A7276D;
+}
+
+.card:hover h3 {
+    color: white;
+}
+
+.card:hover p {
+    color: black;
+}
+
+/* End Component Style */
+/* Start Header Style */
+.header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: rgba(167, 39, 109, 0.6);
+    z-index: 20;
+}
+
+.logo {
+    float: left;
+    margin: auto;
+    position: relative;
+}
+
+.header .header-content .search {
+    float: right;
+    margin-top: 29px;
+    padding: 0 5px;
+}
+
+.header .header-content .search i {
+    color: white;
+    font-weight: 600;
+}
+
+.header .header-content .search .search-icon {
+    margin-top: 2.5px;
+    padding: 0 5px;
+}
+
+.header .header-content .search .search-bar {
+    display: none;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: -10px;
+    border: 1px solid rgba(206, 49, 135, 0.733);
+}
+
+.header .header-content .search:hover .search-icon {
+    display: none;
+}
+
+.header .header-content .search:hover .search-bar {
+    display: block;
+}
+
+.header .header-content .search .search-bar input {
+    background-color: rgba(167, 39, 109, 0);
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    width: 130px;
+}
+
+.header .header-content .search .search-bar input::placeholder {
+    color: white;
+    font-weight: 600;
+}
+
+.header .header-content .search .search:hover .search-icon {
+    display: none;
+}
+
+.header .header-content .links {
+    margin-top: 30px;
+    float: right;
+}
+
+.header .header-content .links li {
+    display: inline;
+    position: relative;
+    padding: 7px 0;
+}
+
+.header .header-content .links li a {
+    color: white;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.header .header-content .links li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 1s;
+}
+
+.header .header-content .links li a:hover::after {
+    width: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* End Header Style */
+/* Start Section Main Style */
+.main {
+    background-image: url(../img/iStock_000017348967XSmall.jpg);
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.main-content {
+    width: 70%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.main-content p {
+    width: 65%;
+    color: #dfdede;
+}
+
+.main .btn-main {
+    background-color: #ffff;
+    color: #A7276D;
+}
+
+.main .btn-main:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main button:hover {
+    background-color: rgba(167, 39, 109, 0.5);
+}
+
+/* End Section Main Style */
+/* Start Section Category Style */
+.category {
+    height: 600px;
+}
+
+.category .category-content {
+    padding: 50px 0;
+}
+
+.category .category-content .card {
+    height: 330px;
+}
+
+.category-content .card::after {
+    width: 0;
+    height: 0;
+}
+
+.category-content .card:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.category-content .card .category-icon {
+    font-size: 35px;
+}
+
+/* End Section Category Style */
+/* Start Section Famous Style */
+
+.famous {
+    width: 100%;
+    height: 117vh;
+    background-color: #dfdede;
+}
+
+.famous .famous-content {
+    padding: 30px 0;
+}
+
+.famous .famous-content .cards {
+    width: 80%;
+}
+
+.famous .famous-content .cards .item {
+    width: 300px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.famous .famous-content .cards .item-center {
+    margin: 0 20px;
+}
+
+.famous .famous-content .cards .item img {
+    width: 300px;
+    height: 270px;
+    border-radius: 15px;
+}
+
+.famous .famous-content .cards .item .hidden-content {
+    width: 300px;
+    height: 270px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+}
+
+.famous .famous-content .cards .item:hover .hidden-content {
+    opacity: 1;
+}
+
+.famous .famous-content .cards .item .hidden-content .item-name {
+    color: rgb(236, 73, 163);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 35px;
+    opacity: 0;
+    transition: all 3s;
+}
+
+.famous .famous-content .cards .item:hover .hidden-content .item-name {
+    opacity: 1;
+}
+
+.famous .famous-content .cards .item .hidden-content .description {
+    color: white;
+    padding: 0 20px 25px 20px;
+    text-align: center;
+    opacity: 0;
+    transition: all 5s;
+}
+
+.famous .famous-content .cards .item:hover .hidden-content .description {
+    opacity: 1;
+}
+
+.famous .famous-content .cards .item .hidden-content i {
+    font-size: 22px;
+    margin-right: 5px;
+    opacity: 0;
+    transition: all 7s;
+}
+
+.famous .famous-content .cards .item:hover .hidden-content i {
+    opacity: 1;
+}
+
+.famous .famous-content .cards .item .hidden-content .icon-heart {
+    color: #c01111;
+}
+
+.famous .famous-content .cards .item .hidden-content .icon-shopping {
+    color: rgb(209, 209, 14);
+}
+
+/* End Section Famous Style */
+/* Start Section deal Style */
+.deal {
+    height: 145vh;
+}
+
+.deal .category-content {
+    padding: 40px 0;
+}
+
+.deal .category-content .cards {
+    width: 80%;
+}
+
+.deal .category-content .card {
+    height: 340px;
+}
+
+.deal .category-content .card img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+}
+
+.deal .right-content {
+    margin-left: 47px;
+    margin-top: -12px;
+}
+
+/* End Section deal Style */
+/* Start Section Better Style */
+.better {
+    height: 85vh;
+}
+
+.better .better-content {
+    padding: 40px 0;
+}
+
+.better .better-content .info-better {
+    float: left;
+    width: 65%;
+    height: 73vh;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.better .better-content .info-better h2 {
+    text-align: left;
+}
+
+.better .better-content .info-better h2:after {
+    left: 0;
+    transform: translateX(0);
+}
+
+.better .better-content .info-better p {
+    color: #3d3d3d;
+}
+.better .better-content .info-better ul li {
+    margin-bottom: 20px;
+    margin-left: 40px;
+    color: #666565;
+}
+
+.better .better-content .info-better ul li i {
+    margin-left: -24px;
+    margin-right: 10px;
+}
+
+.better .better-content .img-better {
+    height: 73vh;
+}
+
+.better .better-content .img-better img {
+    border-radius: 15px;
+    width: 35%;
+}
+
+.better .better-content .img-better .dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.better .better-content .img-better .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 3px;
+    background-color: rgba(167, 39, 109, .5);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.better .better-content .img-better .dot:hover {
+    background-color: #A7276D;
+}
+
+.better .better-content .img-better .active-dot {
+    background-color: #A7276D;
+}
+
+/* End Section Better Style */
+/* Start Section Statistics Style */
+.statistics,
+.developer {
+    width: 100%;
+    height: 65vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../img/statistics-background.jpg);
+    background-size: cover;
+}
+
+.statistics .overlay,
+.developer .overlay {
+    height: 65vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.statistics .statistics-content {
+    text-align: center;
+    padding: 110px;
+}
+
+.statistics .statistics-content .statistics-icon,
+.developer .developer-content .developer-icon {
+    width: 25%;
+    height: 20px;
+    float: left;
+    padding: 40px 0;
+}
+
+.statistics .statistics-content .statistics-icon i {
+    font-size: 40px;
+}
+
+.statistics .statistics-content .statistics-icon p {
+    font-size: 18px;
+    color: rgb(236, 234, 234);
+    padding: 10px 0 0 0;
+}
+
+/* End Section Statistics Style */
+/* Start Section Pricing Style */
+.pricing {
+    height: 95vh;
+}
+
+.pricing .pricing-content {
+    padding: 40px;
+}
+
+.pricing .pricing-content .cards .card {
+    text-align: center;
+}
+
+.pricing .pricing-content .cards .card::after {
+    width: 100%;
+    height: 0;
+}
+
+.pricing .pricing-content .cards .card:hover::after {
+    height: 100%;
+}
+
+.pricing .pricing-content .cards .card h3 {
+    padding: 7px 0;
+
+}
+
+.pricing .pricing-content .cards .card .price-content {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 17px 10px 10px 10px;
+    border: 1px solid #A7276D;
+    margin: auto;
+}
+
+.pricing .pricing-content .cards .card .price-content .price {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.pricing .pricing-content .cards .card .country-list span {
+    color: #A7276D;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+}
+
+.pricing .pricing-content .cards .card:hover .country-list span {
+    color: rgba(255, 255, 255, 0.918);
+}
+
+.pricing .pricing-content .cards .card .country-list ul {
+    text-align: left;
+    padding: 10px;
+}
+
+.pricing .pricing-content .cards .card .country-list ul li {
+    padding: 0 15px 4px 15px;
+}
+
+.pricing .pricing-content .cards .card .country-list ul li i {
+    margin-right: 7px;
+}
+
+/* End Section Pricing Style */
+/* Start Section Developer Style */
+.developer {
+    background-image: url(../img/developer-background.jpg);
+}
+
+.developer .developer-content {
+    padding: 100px;
+}
+
+.developer .developer-content .developer-icon {
+    width: 50%;
+    position: relative;
+    height: 100px;
+
+}
+
+.developer .developer-content .developer-icon .develop-info {
+    padding: 20px 50x;
+}
+
+.developer .developer-content .developer-icon .develop-info img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.developer .developer-content .developer-icon .develop-info .right {
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+.developer .developer-content .developer-icon .develop-info .right span {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: white;
+}
+
+.developer .developer-content .developer-icon .develop-info .right .develop-des {
+    font-size: 18px;
+    font-weight: 500;
+    color: #cf3188;
+}
+
+.developer .developer-content .developer-icon p {
+    padding: 0 25px;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(236, 234, 234);
+}
+
+/* End Section Developer Style */
+/* Start Section Team Style */
+.managers {
+    height: 90vh;
+}
+
+.managers .managers-content,
+.news .news-content {
+    padding: 40px 0;
+    margin: auto;
+}
+
+.managers .managers-content .cards,
+.news .news-content .cards {
+    width: 90%;
+}
+
+.managers .managers-content .card {
+    height: 350px;
+    width: calc(85% / 3);
+    padding: 0;
+}
+
+.managers .managers-content .first-card {
+    margin-left: 45px;
+}
+
+.managers .managers-content .card::after,
+.news .news-content .card::after {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(167, 39, 109, .3);
+    z-index: 3;
+}
+
+.managers .managers-content .card:hover::after,
+.news .news-content .card:hover::after {
+    height: 100%;
+}
+
+.managers .managers-content .card .manager,
+.news .news-content .card .new {
+    width: 100%;
+    height: 250px;
+    margin: auto;
+    position: relative;
+}
+
+.managers .managers-content .card .manager img,
+.news .news-content .card .new img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+}
+
+.managers .managers-content .card .manager .manager-icon-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: all 1s;
+    z-index: 2;
+}
+
+.managers .managers-content .card:hover .manager .manager-icon-bar {
+    visibility: visible;
+}
+
+.managers .managers-content .card .manager .manager-icon-bar a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #A7276D;
+    font-size: 23px;
+    margin-left: auto;
+    text-align: center;
+    padding: 7px 0;
+}
+
+.managers .managers-content .card .manager .manager-icon-bar .radius-link-first {
+    border-radius: 10px 20px 0 0;
+}
+
+.managers .managers-content .card .manager .manager-icon-bar .radius-link-second {
+    border-radius: 0 0 10px 10px;
+}
+
+.managers .managers-content .card .manager .manager-icon-bar a i {
+    color: #fff;
+}
+
+.managers .managers-content .card .manager-info {
+    padding: 0 30px;
+}
+
+.managers .managers-content .card .manager-info h3 {
+    color: #A7276D;
+    font-size: 22px;
+}
+
+.managers .managers-content .card:hover .manager-info h3 {
+    color: black;
+}
+
+.managers .managers-content .card .manager-info span {
+    color: gray;
+    display: block;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.managers .managers-content .card:hover .manager-info span {
+    color: #A7276D;
+}
+
+.managers .managers-content .card .manager-info i {
+    margin-right: 10px;
+    color: inherit;
+}
+
+/* End Section Team Style */
+/* Start Section News Style */
+.news {
+    height: 130vh;
+}
+
+.news .news-content .card {
+    height: 600px;
+    padding: 0;
+}
+
+.news .news-content .card::after {
+    z-index: -1;
+}
+
+.news .news-content .card .new .links {
+    margin-top: 10px;
+}
+
+.news .news-content .card .new .links,
+.news .news-content .card .new .new-info {
+    padding: 0 25px;
+}
+
+.news .news-content .card .new .links span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.news .news-content .card .new .links span i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.news .news-content .card .new .links .link-center {
+    margin: 0 20px;
+}
+
+.news .news-content .card:hover .new .new-info h3 {
+    transition: 1.5s;
+}
+
+/* End Section News Style */
+/* Start Footer Style */
+.footer {
+    height: 35vh;
+    background-color: #A7276D;
+}
+
+.footer-content {
+    padding: 50px 40px;
+}
+
+.footer-content .top-footer {
+    height: 90px;
+    border-bottom: 1px solid gray;
+}
+
+.footer-content .top-footer ul {
+    float: right;
+    padding: 18px 0 0 0;
+}
+
+.footer-content .top-footer ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(199, 126, 166);
+    padding: 15px;
+}
+
+.footer-content .top-footer ul li:hover {
+    background-color: rgb(199, 126, 166, .5);
+}
+
+.footer-content .top-footer ul li i {
+    color: #ffff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.footer-content .copy-right {
+    padding: 15px;
+    float: right;
+}
+
+/* End Footer Style */
